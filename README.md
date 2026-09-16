@@ -85,37 +85,30 @@ The following preprocessing steps were performed:
 - Handled missing categorical values using `"Unknown"`.
 - Filled missing numerical values using the mean.
 
+Exploratory Data Analysis
 
-Example:
+Exploratory Data Analysis was performed to understand the dataset and identify patterns and relationships between different variables.
 
-
-```python
-df["BMI"] = df["BMI"].fillna(df["BMI"].mean())
-🔍 Exploratory Data Analysis
-
-Exploratory Data Analysis was performed to understand the dataset and identify patterns and relationships.
-
-The project uses:
-
+Libraries Used for EDA
 Pandas
 NumPy
 Matplotlib
 Seaborn
 
-Various visualizations and statistical analyses were used to understand the data before applying Machine Learning models.
+The analysis included statistical summaries and data visualizations to better understand the characteristics of the dataset before applying Machine Learning models.
 
-🤖 Classification Algorithms
+Machine Learning Classification Algorithms
 1. Logistic Regression
 
-Logistic Regression is a statistical Machine Learning algorithm commonly used for binary classification problems. It predicts the probability of an observation belonging to a particular class.
+Logistic Regression is a supervised Machine Learning algorithm commonly used for binary classification problems. It estimates the probability of an observation belonging to a particular class.
 
 2. K-Nearest Neighbors (KNN)
 
-KNN classifies a new data point based on the classes of its nearest neighboring observations.
+KNN classifies a new observation based on the classes of its nearest neighboring observations.
 
 3. Decision Tree
 
-Decision Tree is a supervised Machine Learning algorithm that makes predictions using a tree-like structure of decision rules.
+A Decision Tree is a supervised Machine Learning algorithm that makes predictions using a tree-like structure of decision rules.
 
 4. Random Forest
 
@@ -123,50 +116,47 @@ Random Forest is an ensemble learning algorithm that combines multiple decision 
 
 5. Naive Bayes
 
-Naive Bayes is a probabilistic classification algorithm based on Bayes' theorem.
+Naive Bayes is a probabilistic classification algorithm based on Bayes' theorem and assumes conditional independence between features.
 
 6. Support Vector Machine (SVM)
 
-SVM finds an optimal decision boundary that separates different classes while maximizing the margin between them.
+Support Vector Machine finds a decision boundary that separates different classes while maximizing the margin between them.
 
-📈 Model Performance
+Model Evaluation
 
-All six classification algorithms achieved 100% accuracy on the evaluated test dataset.
+The classification models were evaluated using accuracy on the test dataset.
 
-Algorithm	Accuracy	Conclusion
-Logistic Regression	100%	Perfect classification on the evaluated test set.
-K-Nearest Neighbors (KNN)	100%	Correctly classified all test observations.
-Decision Tree	100%	Achieved perfect test accuracy.
-Random Forest	100%	Achieved perfect test accuracy.
-Naive Bayes	100%	Correctly classified all test observations.
-Support Vector Machine (SVM)	100%	Achieved perfect test accuracy.
-🏆 Conclusion
+Results
+Algorithm	Accuracy
+Logistic Regression	100%
+K-Nearest Neighbors (KNN)	100%
+Decision Tree	100%
+Random Forest	100%
+Naive Bayes	100%
+Support Vector Machine (SVM)	100%
 
-In this project, six different Machine Learning classification algorithms were implemented for breast cancer prediction.
+All six models achieved 100% accuracy on the evaluated test dataset.
 
-Logistic Regression, KNN, Decision Tree, Random Forest, Naive Bayes, and SVM all achieved 100% accuracy on the evaluated test dataset.
+Since all models achieved the same accuracy, no single model can be identified as the best-performing model based on accuracy alone.
 
-Since all models produced the same accuracy, there is no single best-performing algorithm based on accuracy alone. The results indicate that the models were able to classify the observations in the test set successfully.
+Important: A 100% test accuracy result is unusually high for a medical classification problem. This result should not be interpreted as evidence of real-world clinical performance. Further validation using cross-validation, additional evaluation metrics, and checks for possible data leakage would be necessary before drawing conclusions about real-world use.
 
-However, because this is a medical classification problem, accuracy should not be the only evaluation metric. Further evaluation using Precision, Recall, F1-Score, Confusion Matrix, and ROC-AUC would provide a more comprehensive assessment of model performance.
+Recommended Evaluation Metrics
 
-The reported 100% accuracy should also be validated using cross-validation and checks for possible data leakage before considering the models for real-world medical prediction.
+For a medical classification problem, accuracy alone may not provide a complete picture of model performance.
 
-🛠️ Technologies Used
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
-Jupyter Notebook
-📂 Project Structure
-Breast-Cancer-Prediction/
-│
-├── breast_cancer_prediction.ipynb
-├── breast_cancer_prediction.csv
-└── README.md
-🔄 Machine Learning Workflow
+Future evaluation can include:
+
+Precision
+Recall
+F1-Score
+Confusion Matrix
+ROC-AUC
+Cross-Validation
+
+These metrics can provide a more comprehensive understanding of how the models classify different classes.
+
+Machine Learning Workflow
 Dataset
    ↓
 Data Loading
@@ -190,7 +180,39 @@ Prediction
 Model Evaluation
    ↓
 Model Comparison
-📚 Key Learning Outcomes
+Technologies Used
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+Jupyter Notebook
+Project Structure
+Breast-Cancer-Prediction/
+│
+├── breast_cancer_prediction.ipynb
+├── breast_cancer_prediction.csv
+├── README.md
+└── requirements.txt
+How to Run the Project
+1. Clone the Repository
+git clone https://github.com/bensonbenny17/ML_CLASSIFICATION_PROJECT.git
+2. Navigate to the Project Directory
+cd ML_CLASSIFICATION_PROJECT
+3. Install Required Libraries
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+4. Launch Jupyter Notebook
+jupyter notebook
+5. Open the Notebook
+
+Open:
+
+breast_cancer_prediction.ipynb
+
+Run the notebook cells sequentially to reproduce the analysis and model evaluation.
+
+Key Learning Outcomes
 
 Through this project, I gained practical experience in:
 
@@ -198,24 +220,40 @@ Python for Data Analysis
 Pandas DataFrame operations
 NumPy
 Data Cleaning
-Handling Missing Values
+Missing Value Handling
 Exploratory Data Analysis
 Data Visualization
 Machine Learning Classification
-Model Training and Prediction
+Model Training
+Model Prediction
 Model Evaluation
 Comparing Multiple Classification Algorithms
-👨‍💻 Author
+Future Improvements
+
+The project can be further improved by:
+
+Applying cross-validation.
+Evaluating Precision, Recall, F1-Score, and ROC-AUC.
+Creating confusion matrices for each model.
+Investigating possible data leakage.
+Performing feature selection.
+Applying hyperparameter tuning.
+Comparing additional classification algorithms.
+Testing the models on an independent dataset.
+Conclusion
+
+This project demonstrates an end-to-end approach to Machine Learning classification, from data cleaning and exploratory analysis to model training, prediction, evaluation, and comparison.
+
+Six classification algorithms were implemented: Logistic Regression, KNN, Decision Tree, Random Forest, Naive Bayes, and SVM.
+
+All six models achieved 100% accuracy on the evaluated test dataset. However, because this is a medical classification problem, the result requires further validation using additional evaluation metrics, cross-validation, and data-leakage checks before making any conclusions about real-world performance.
+
+The project provided valuable hands-on experience with Python, Pandas, Scikit-learn, EDA, data preprocessing, classification, and model evaluation.
+
+Author
 
 Benson Mathew
 
 Skills Demonstrated
 
-Python Pandas NumPy Machine Learning Scikit-learn Data Analysis EDA Data Visualization Classification
-
-
-
-### ⭐ One thing I'd change before uploading
-
-
-Because **100% accuracy across all six models is unusually high**, keep the wording **“100% accura
+Python Pandas NumPy Scikit-learn Machine Learning Data Analysis EDA Data Visualization Classification
