@@ -250,10 +250,10 @@ All six models achieved 100% accuracy on the evaluated test dataset. However, be
 
 The project provided valuable hands-on experience with Python, Pandas, Scikit-learn, EDA, data preprocessing, classification, and model evaluation.
 
-Author
+## 👨‍💻 Author
 
-Benson Mathew
+**Benson Mathew**
 
-Skills Demonstrated
+## Skills Demonstrated
 
 Python Pandas NumPy Scikit-learn Machine Learning Data Analysis EDA Data Visualization Classification
